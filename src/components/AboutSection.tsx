@@ -1,8 +1,50 @@
-
 import { User, Code, Briefcase, Palette } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const AboutSection = () => {
+  const professionalPhotos = [
+    {
+      src: "/lovable-uploads/8ef8592c-454d-4cdc-b002-fe0c35120306.png",
+      alt: "Mark Kabika - Professional Portrait",
+      title: "Professional Portrait",
+      description: "Corporate & Business Photography"
+    },
+    {
+      src: "/lovable-uploads/df67bee6-af6f-41c3-b0a4-232ee22e0c16.png",
+      alt: "Mark Kabika - Creative Design",
+      title: "Creative Expression",
+      description: "Fashion & Design Photography"
+    },
+    {
+      src: "/lovable-uploads/4537dfd0-295a-45e6-b633-c7c816c77c60.png",
+      alt: "Mark Kabika - Artistic Vision",
+      title: "Artistic Vision",
+      description: "Creative Direction & Styling"
+    }
+  ];
+
+  const marketingMaterials = [
+    {
+      src: "/lovable-uploads/2dbaf212-aea0-422f-9213-d28a077dea79.png",
+      alt: "Professional Insurance Marketing Design",
+      title: "Marketing Design",
+      description: "Professional Insurance Branding"
+    },
+    {
+      src: "/lovable-uploads/d3c0cce4-f431-4649-aed7-0004d0a754a7.png",
+      alt: "Services Marketing Material",
+      title: "Service Promotion",
+      description: "Client Engagement Materials"
+    }
+  ];
+
   return (
     <section id="about" className="py-20 bg-portfolio-dark">
       <div className="container mx-auto px-6">
@@ -107,7 +149,7 @@ const AboutSection = () => {
           </div>
         </div>
 
-        {/* Professional Photos Gallery */}
+        {/* Professional Photos Carousel */}
         <div className="mt-20">
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-white mb-4">
@@ -118,74 +160,62 @@ const AboutSection = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="relative group overflow-hidden rounded-xl">
-              <img 
-                src="/lovable-uploads/8ef8592c-454d-4cdc-b002-fe0c35120306.png" 
-                alt="Mark Kabika - Professional Portrait" 
-                className="w-full h-96 object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-portfolio-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <h4 className="text-lg font-semibold">Professional Portrait</h4>
-                <p className="text-sm text-gray-300">Corporate & Business Photography</p>
-              </div>
+          <Carousel className="w-full max-w-5xl mx-auto">
+            <CarouselContent>
+              {professionalPhotos.map((photo, index) => (
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                  <div className="relative group overflow-hidden rounded-xl h-96">
+                    <img 
+                      src={photo.src}
+                      alt={photo.alt}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-portfolio-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <h4 className="text-lg font-semibold">{photo.title}</h4>
+                      <p className="text-sm text-gray-300">{photo.description}</p>
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="text-white border-white hover:bg-white hover:text-portfolio-dark" />
+            <CarouselNext className="text-white border-white hover:bg-white hover:text-portfolio-dark" />
+          </Carousel>
+
+          {/* Marketing Materials Carousel */}
+          <div className="mt-16">
+            <div className="text-center mb-8">
+              <h4 className="text-2xl font-bold text-white mb-2">
+                Design <span className="gradient-text">Showcase</span>
+              </h4>
+              <p className="text-gray-400">
+                Professional marketing materials and brand designs
+              </p>
             </div>
 
-            <div className="relative group overflow-hidden rounded-xl">
-              <img 
-                src="/lovable-uploads/df67bee6-af6f-41c3-b0a4-232ee22e0c16.png" 
-                alt="Mark Kabika - Creative Design" 
-                className="w-full h-96 object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-portfolio-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <h4 className="text-lg font-semibold">Creative Expression</h4>
-                <p className="text-sm text-gray-300">Fashion & Design Photography</p>
-              </div>
-            </div>
-
-            <div className="relative group overflow-hidden rounded-xl">
-              <img 
-                src="/lovable-uploads/4537dfd0-295a-45e6-b633-c7c816c77c60.png" 
-                alt="Mark Kabika - Artistic Vision" 
-                className="w-full h-96 object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-portfolio-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <h4 className="text-lg font-semibold">Artistic Vision</h4>
-                <p className="text-sm text-gray-300">Creative Direction & Styling</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Marketing Materials Showcase */}
-          <div className="mt-16 grid md:grid-cols-2 gap-8">
-            <div className="relative group overflow-hidden rounded-xl">
-              <img 
-                src="/lovable-uploads/2dbaf212-aea0-422f-9213-d28a077dea79.png" 
-                alt="Professional Insurance Marketing Design" 
-                className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-portfolio-dark/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <h4 className="text-lg font-semibold">Marketing Design</h4>
-                <p className="text-sm text-gray-300">Professional Insurance Branding</p>
-              </div>
-            </div>
-
-            <div className="relative group overflow-hidden rounded-xl">
-              <img 
-                src="/lovable-uploads/d3c0cce4-f431-4649-aed7-0004d0a754a7.png" 
-                alt="Services Marketing Material" 
-                className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-portfolio-dark/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <h4 className="text-lg font-semibold">Service Promotion</h4>
-                <p className="text-sm text-gray-300">Client Engagement Materials</p>
-              </div>
-            </div>
+            <Carousel className="w-full max-w-4xl mx-auto">
+              <CarouselContent>
+                {marketingMaterials.map((material, index) => (
+                  <CarouselItem key={index} className="md:basis-1/2">
+                    <div className="relative group overflow-hidden rounded-xl h-64">
+                      <img 
+                        src={material.src}
+                        alt={material.alt}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-portfolio-dark/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h4 className="text-lg font-semibold">{material.title}</h4>
+                        <p className="text-sm text-gray-300">{material.description}</p>
+                      </div>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="text-white border-white hover:bg-white hover:text-portfolio-dark" />
+              <CarouselNext className="text-white border-white hover:bg-white hover:text-portfolio-dark" />
+            </Carousel>
           </div>
         </div>
       </div>
