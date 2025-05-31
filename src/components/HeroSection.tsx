@@ -24,12 +24,12 @@ const HeroSection = () => {
           </h1>
           
           <h2 className="text-2xl md:text-3xl text-gray-300 mb-8">
-            Software Developer & Web Designer
+            Software Developer, Web Designer & Graphic Artist
           </h2>
           
           <p className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Based in Lusaka, Zambia, I create innovative web solutions and custom software applications. 
-            Specializing in full-stack development, cybersecurity, and cutting-edge digital experiences.
+            Based in Lusaka, Zambia, I create innovative web solutions, custom software applications, and stunning visual designs. 
+            Specializing in full-stack development, cybersecurity, and professional graphic design services.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
@@ -47,7 +47,7 @@ const HeroSection = () => {
               size="lg"
               className="border-portfolio-primary text-portfolio-primary hover:bg-portfolio-primary hover:text-white transition-all duration-300 text-lg px-8 py-3"
             >
-              Learn More
+              View My Work
             </Button>
           </div>
           
@@ -61,8 +61,8 @@ const HeroSection = () => {
               <div className="text-sm">Projects Completed</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-white">24/7</div>
-              <div className="text-sm">Support Available</div>
+              <div className="text-2xl font-bold text-white">100+</div>
+              <div className="text-sm">Designs Created</div>
             </div>
           </div>
         </div>

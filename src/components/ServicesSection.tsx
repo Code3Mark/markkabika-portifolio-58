@@ -1,5 +1,5 @@
 
-import { Code, Briefcase, Image, Users } from 'lucide-react';
+import { Code, Briefcase, Palette, Users } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
@@ -20,18 +20,18 @@ const ServicesSection = () => {
       color: 'portfolio-accent'
     },
     {
+      icon: Palette,
+      title: 'Graphic Design',
+      description: 'Professional graphic design services including branding, marketing materials, and visual identity creation.',
+      features: ['Brand Identity Design', 'Marketing Materials', 'Adobe Photoshop Expertise', 'Visual Content Creation'],
+      color: 'pink-500'
+    },
+    {
       icon: Users,
       title: 'IT Consulting',
       description: 'Cybersecurity assessments, network security, vulnerability testing, and IT infrastructure consulting.',
       features: ['Security Assessments', 'Network Monitoring', 'Risk Analysis', 'Compliance Auditing'],
       color: 'purple-500'
-    },
-    {
-      icon: Image,
-      title: 'Design Services',
-      description: 'Graphic design, UI/UX design, branding, and digital marketing materials for your business.',
-      features: ['UI/UX Design', 'Brand Identity', 'Marketing Materials', 'Digital Assets'],
-      color: 'pink-500'
     }
   ];
 
@@ -48,7 +48,7 @@ const ServicesSection = () => {
             <span className="gradient-text">Services</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Comprehensive digital solutions to help your business thrive in the modern world
+            Comprehensive digital solutions and creative design services to help your business thrive
           </p>
         </div>
 
@@ -103,8 +103,8 @@ const ServicesSection = () => {
             Ready to Start Your Project?
           </h3>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Let's discuss your requirements and create something amazing together. 
-            I'm available for both short-term projects and long-term partnerships.
+            Whether you need a stunning website, custom software, or eye-catching designs, 
+            I'm here to bring your vision to life with professional quality and creative excellence.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
