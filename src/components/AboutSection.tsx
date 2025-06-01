@@ -1,3 +1,4 @@
+
 import { User, Code, Briefcase, Palette } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import {
@@ -67,8 +68,8 @@ const AboutSection = () => {
             </h3>
             
             <p className="text-gray-300 text-lg leading-relaxed">
-              I'm Mark Kabika, a dedicated Software Engineering student at Information and Communication University, 
-              graduating in August 2025. Based in Lusaka, Zambia, I combine technical excellence with creative design 
+              I'm Mark Kabika, a dedicated Software Developer and Sales Executive at Professional Insurance, 
+              based in Lusaka, Zambia. I combine technical excellence with creative design 
               expertise to deliver comprehensive digital solutions.
             </p>
             
@@ -80,8 +81,8 @@ const AboutSection = () => {
 
             <div className="grid grid-cols-2 gap-4 mt-8">
               <div className="text-center p-4 rounded-lg bg-gray-800/50">
-                <div className="text-2xl font-bold text-portfolio-primary">2025</div>
-                <div className="text-gray-400">Graduation Year</div>
+                <div className="text-2xl font-bold text-portfolio-primary">Sales Executive</div>
+                <div className="text-gray-400">Professional Insurance</div>
               </div>
               <div className="text-center p-4 rounded-lg bg-gray-800/50">
                 <div className="text-2xl font-bold text-portfolio-accent">Zambia</div>
@@ -94,13 +95,13 @@ const AboutSection = () => {
             <Card className="card-gradient border-portfolio-primary/20 hover:glow-effect transition-all duration-300">
               <CardContent className="p-6">
                 <div className="flex items-center mb-4">
-                  <User className="w-8 h-8 text-portfolio-primary mr-3" />
-                  <h4 className="text-xl font-semibold text-white">Education</h4>
+                  <Briefcase className="w-8 h-8 text-portfolio-primary mr-3" />
+                  <h4 className="text-xl font-semibold text-white">Professional Role</h4>
                 </div>
                 <p className="text-gray-300">
-                  Bachelor's in ICT Software Engineering<br />
-                  Information and Communication University<br />
-                  <span className="text-portfolio-accent">2020 - 2025</span>
+                  Sales Executive<br />
+                  Professional Insurance<br />
+                  <span className="text-portfolio-accent">Client Relations & Business Development</span>
                 </p>
               </CardContent>
             </Card>
@@ -136,7 +137,7 @@ const AboutSection = () => {
             <Card className="card-gradient border-portfolio-primary/20 hover:glow-effect transition-all duration-300">
               <CardContent className="p-6">
                 <div className="flex items-center mb-4">
-                  <Briefcase className="w-8 h-8 text-purple-400 mr-3" />
+                  <User className="w-8 h-8 text-purple-400 mr-3" />
                   <h4 className="text-xl font-semibold text-white">Experience</h4>
                 </div>
                 <p className="text-gray-300">
